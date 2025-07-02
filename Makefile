@@ -15,19 +15,3 @@ deployAndVerify:
 # Deploy without verifying
 deploy:
 	@forge script scripts/Deploy.sol $(NETWORK_ARGS)
-
-# Run a buy interaction
-buyNFT:
-	@forge script scripts/Interactions.s.sol:BuyNFT $(NETWORK_ARGS)
-
-# Put a token on sale
-putOnSale:
-	@forge script scripts/Interactions.s.sol:PutOnSaleNFT $(NETWORK_ARGS)
-
-# Call claim logic
-claimNFT:
-	@forge script scripts/Interactions.s.sol:ClaimNFT $(NETWORK_ARGS)
-
-# Low-level mint using cast (example)
-mintCast:
-	@forge send $(CONTRACT_ADDRESS) "mintNft()" $(NETWORK_ARGS)
